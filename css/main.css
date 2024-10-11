@@ -23,7 +23,14 @@ a {
     text-decoration: none;
 }
 
+ul {
+    padding: 0;
+    margin: 0;
+}
+
 .container {
+    /* display: flex;
+    justify-content: space-between; */
     /* max-width: 1700px; */
     /* margin: 0 auto; */
     /* padding-right: 100px; */
@@ -56,10 +63,10 @@ a {
 
 .nav {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     margin-top: 0px;
-    margin-left: 80px;
+    margin-inline: 80px;
 
 }
 
@@ -67,20 +74,25 @@ a {
     display: flex;
     justify-content: space-between;
     font-size: 15px;
-    margin-left: 90px;
+    width: 50%;
+    /* margin-left: 90px; */
 
-    }
+}
 
 .menu button {
     letter-spacing: 0.1em;
+}
+
+.menu li {
+    /* margin-left: 10%; */
 }
 
 .menu-point {
     border: 1px solid white;
     background: white;
     border-radius: 0.5em;
-    padding: 5px 10px 5px 10px;
-    margin-left: 30px;
+    padding: 10px 20px 10px 20px;
+    margin-left: 10%;
     color: #000;
     font-weight:500;
 }
@@ -241,13 +253,13 @@ a {
     
         }
 
-    .menu {
+    /* .menu {
             display: flex;
             justify-content: space-between;
             font-size: 20px;
             margin-left: 160px;
     
-        }
+        } */
     
     .menu-point {
             border: 1px solid white;
@@ -278,6 +290,18 @@ a {
             z-index: -1;
 
         }
+    }
+}
+
+@media (max-width: 1300px) {
+    .menu {
+        width: 60%;
+    }
+    .menu-point {
+        border: 1px solid white;
+        background: white;
+        border-radius: 0.5em;
+        padding: 5px 10px 5px 10px;
     }
 }
 
@@ -376,13 +400,13 @@ a {
         }
     }
 
-    .menu {
+    /* .menu {
             display: flex;
             justify-content: space-between;
             font-size: 12px;
             margin-left: 27px;
     
-        }
+        } */
     
     .menu-point {
             border: 1px solid white;
@@ -488,13 +512,13 @@ a {
             }
         }
     
-        .menu {
+        /* .menu {
             display: flex;
             justify-content: space-between;
             font-size: 10px;
             margin-left: 20px;
     
-        }
+        } */
     
         .menu-point {
             border: 1px solid white;
@@ -604,12 +628,12 @@ a {
                 }
             }
         
-            .menu {
+            /* .menu {
                 display: none;
                 justify-content: space-between;
                 font-size: 10px;
                 margin-left: 20px;
-            }
+            } */
         
             .menu-point {
                 border: 1px solid white;
@@ -734,12 +758,12 @@ a {
                 }
             }
         
-            .menu {
+            /* .menu {
                 display: none;
                 justify-content: space-between;
                 font-size: 10px;
                 margin-left: 20px;
-            }
+            } */
         
             .menu-point {
                 border: 1px solid white;

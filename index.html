@@ -8,30 +8,51 @@
     <link rel="stylesheet" href="css/AboutUs.css">
     <link rel="stylesheet" href="css/Products.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/burger.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+
     
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <div class="nav">
+            <nav class="nav">
                 <a href="index.html">
                     <img class="logo" src="./img/Logo.svg" alt="logo.svg">
                 </a>
-                <div class="menu">
+                <ul class="menu">
+                    <li>
+                        <button class="menu-point main-button">ГЛАВНАЯ</button>
+                    </li>
+                    <li>
+                        <button class="menu-point devices-button">ПРИБОРЫ</button>
+                    </li>
+                    <li>
+                        <button class="menu-point contacts-button">КОНТАКТЫ</button>
+                    </li>
+                    <li>
+                        <button class="menu-point exhibition-button">ВЫСТАВКИ</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
                     <!-- <a class="menu-point" href="index.html">ГЛАВНАЯ</a> -->
-                    <button class="menu-point main-button">ГЛАВНАЯ</button>
-                    <!-- <a class="menu-point " href="#">ПРИБОРЫ</a> -->
+                    <!-- <button class="menu-point main-button">ГЛАВНАЯ</button>
+    
                     <button class="menu-point devices-button">ПРИБОРЫ</button>
                     <button class="menu-point contacts-button">КОНТАКТЫ</button>
+                    <button class="menu-point exhibition-button">ВЫСТАВКИ</button> -->
                     <!-- <a class="menu-point contacts-button" href="">КОНТАКТЫ</a> -->
-                </div>
 
-            </div>
+
+            </nav>
             <div class="offer">
                 <div class="offer__intro">
                     <p class="highlight-last-word">
@@ -86,11 +107,11 @@
                     <p id="work" class="home">Бытовые</p>
                 </div>
              
-                <select class="select-category" name="" id="">
-                    <option value="">Все</option>
-                    <option value="">Ориентирование</option>
-                    <option value="">Обучение</option>
-                    <option value="">Бытовые</option>
+                <select class="select-category" name="" id="categorySelect">
+                    <option class="all" value="all">Все</option>
+                    <option class="orient" value="orient">Ориентирование</option>
+                    <option class="learn" value="learn">Обучение</option>
+                    <option class="work" value="work">Бытовые</option>
                 </select>
 
                 
@@ -190,7 +211,6 @@
                             </div>
                         </div>
                     </div> -->
-
                 </div>
             </div>
             
@@ -199,6 +219,10 @@
     <div class="footer">
         <div class="footer__main">
             <p class="footer__text">© 2024 «Сонар» - все права защищены</p>
+            <div class="footer__other">
+                <a href="">Выставки</a>
+                <a href="">Нововведения</a>
+            </div>
             <div class="footer__links">
                 <a href="https://t.me/ravehdd">
                     <img class="footer__img first" src="./img/TgLogo.svg" alt="TG" />
@@ -217,4 +241,6 @@
     </div>
 </body>
 <script src="js/main.js"></script>
+<script src="js/burger.js"></script>
+
 </html>

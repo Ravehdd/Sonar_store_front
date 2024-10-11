@@ -124,6 +124,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 const categories = document.querySelectorAll('.categories p');
 console.log(categories);
 
+const categories2 = document.querySelectorAll(".select-category option");
+
+console.log(categories2);
+
 const productsContainer = document.querySelector('.cards');
 console.log(productsContainer);
 
@@ -150,21 +154,23 @@ console.log(productsContainer);
 
 
 
+
 function sortProductsByCategory(categoryName, categoryText) {
+
+  console.log(categoryName, categoryText)
   categories.forEach(cat => cat.classList.remove('active'));
 
   const selectedCategory = document.querySelector(`.${categoryName}`);
   selectedCategory.classList.add('active');
 
   const products = Array.from(productsContainer.children);
+  console.log(products[1].style.display)
 
 
   // Устанавливаем display: block для всех товаров
   products.forEach(product => {
     product.style.display = 'block'
   });
-  
-
 
   if (categoryName === 'all') {
     productsContainer.innerHTML = '';
@@ -197,12 +203,78 @@ categories.forEach(cat => {
   cat.addEventListener('click', () => sortProductsByCategory(cat.className, cat.innerHTML));
 });
 
+
+const selectElement = document.querySelector('.select-category');
+
+// Добавляем обработчик события change
+selectElement.addEventListener('change', function(event) {
+  const selectedOption = event.target.options[event.target.selectedIndex];
+  sortProductsByCategory(selectElement.value, selectedOption.text);
+});
+
+
+function sortProductsByCategory2(categoryName) {
+  const selectedCategory = document.getElementById('categorySelect');
+  
+  // Обновляем выбранную категорию
+  selectedCategory.value = categoryName;
+
+  const products = Array.from(productsContainer.children);
+
+  // Скрываем все товары
+  products.forEach(product => product.style.display = 'block');
+
+  let filteredProducts;
+  switch(categoryName) {
+    case 'all':
+      filteredProducts = products; // Все товары
+      break;
+    case 'orient':
+      filteredProducts = products.filter(product => 
+        product.querySelector('.category__name').textContent.trim() === 'Ориентирование'
+      );
+      break;
+    case 'learn':
+      filteredProducts = products.filter(product => 
+        product.querySelector('.category__name').textContent.trim() === 'Обучение'
+      );
+      break;
+    case 'work':
+      filteredProducts = products.filter(product => 
+        product.querySelector('.category__name').textContent.trim() === 'Бытовые'
+      );
+      break;
+  }
+
+  // Показываем только отфильтрованные товары
+  filteredProducts.forEach(product => {
+    product.style.display = 'block';
+    productsContainer.appendChild(product);
+  });
+}
+
+// Добавляем обработчик события для селектора
+// document.getElementById('categorySelect').addEventListener('change', () => {
+//   console.log(this.value)
+//   sortProductsByCategory2(this.value);
+// });
+
+
 // Добавьте этот скрипт в конец вашего HTML файла или в файл scripts.js
 
 // Функция для скролла вниз
 function scrollToBottom() {
   // Скроллим вниз на весь экран
   window.scrollTo(0, document.body.scrollHeight);
+}
+
+// Функция для скролла вверх
+function scrollToTop() {
+  // Скроллим вверх на весь экран
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
 function scrollToProducts() {
@@ -223,6 +295,13 @@ function scrollToProducts() {
 document.addEventListener('DOMContentLoaded', function() {
   const contactButton = document.querySelector('.contacts-button'); // Замените '.contact-button' на класс или id вашей кнопки
   const toolsButton = document.querySelector('.devices-button');
+  const mainButton = document.querySelector('.main-button');
+
+  if (mainButton) {
+    mainButton.addEventListener('click', scrollToTop);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
   
   if (contactButton) {
     contactButton.addEventListener('click', scrollToBottom);

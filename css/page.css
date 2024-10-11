@@ -205,7 +205,7 @@ p {
         margin-block: 0;
         margin-bottom: 60px;
         font-size: 20px;
-        width: 50%;
+        /* width: 50%; */
     }
 
     .more-button {
@@ -246,6 +246,22 @@ p {
     }
 }
 
+@media (max-width: 1190px) {
+    .main-title {
+        font-size: 250%;
+    }
+    .main-description {
+        width: 80%;
+        font-size: 17px;
+        margin-bottom: 50px;
+    }
+
+    .more-button {
+        font-size: 15px;
+        padding: 20px 40px;
+    }
+}
+
 @media (max-width: 1024px) {
     .logo {
         width: 100px;
@@ -263,18 +279,18 @@ p {
     .category {
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .main-description {
         margin-bottom: 30px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .more-button {
         font-size: 10px;
         padding: 15px 30px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .main-image {
@@ -296,6 +312,8 @@ p {
     }
 }
 
+
+
 @media (max-width: 768px) {
     body {
         margin-inline: 30px;
@@ -316,7 +334,7 @@ p {
 
     .main-title {
         margin-block: 0;
-        font-size: 1rem;
+        font-size: 200%;
     }
 
     .category {

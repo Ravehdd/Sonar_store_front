@@ -52,6 +52,57 @@ document.addEventListener('DOMContentLoaded', async () => {
   console.log(product)
 });
 
+function scrollToBottom() {
+  window.scrollTo(  {
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
+}
 
+function scrollToTop() {
+  window.scrollTo(  {
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function backToMain() {
+  window.location.href = `index.html`;
+}
+
+function backToInfo() {
+  window.location.href = `info.html`;
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  const contactButton = document.querySelector('.contacts-button'); // Замените '.contact-button' на класс или id вашей кнопки
+  const infoButton = document.querySelector('.info-button');
+  const mainButton = document.querySelector('.main-button');
+  const footerButton = document.querySelector('.footer-button');
+
+  if (mainButton) {
+    mainButton.addEventListener('click', backToMain);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
+  
+  if (contactButton) {
+    contactButton.addEventListener('click', scrollToBottom);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
+
+  if (infoButton) {
+    infoButton.addEventListener('click', backToInfo);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
+
+  if (footerButton) {
+    footerButton.addEventListener('click', scrollToTop);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
+});
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/burger.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -21,20 +22,44 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html">
+            <!-- <a href="index.html">
                 <img class="logo" src="img/logo.svg" alt="logo.svg">
             </a>
             <div class="menu">
-                <!-- <button class="menu-point main-button">ГЛАВНАЯ</button> -->
-                <!-- <button class="menu-point devices-button">ПРИБОРЫ</button> -->
-                <!-- <button class="menu-point contacts-button">КОНТАКТЫ</button> -->
-                <a class="menu-point" href="index.html">
-                    <img class="back-arrow" src="img/back-arrow.svg" alt="back-arrow">
-                    <p>ГЛАВНАЯ</p>
+                <button class="menu-point main-button">ГЛАВНАЯ</button>
+                <button class="menu-point contacts-button">КОНТАКТЫ</button>
+                <button class="menu-point info-button">ИНФОРМАЦИЯ</button>
+            </div> -->
+            <nav class="nav">
+                <a href="index.html">
+                    <img class="logo" src="./img/Logo.svg" alt="logo.svg">
                 </a>
-                <!-- <a class="menu-point" href="#">ПРИБОРЫ</a>
-                <a class="menu-point contacts-button" href="#">КОНТАКТЫ</a> -->
-            </div>
+                <ul class="menu">
+                    <li>
+                        <button class="menu-point main-button">ГЛАВНАЯ</button>
+                    </li>
+                    <li>
+                        <button class="menu-point contacts-button">КОНТАКТЫ</button>
+                    </li>
+                    <li>
+                        <button class="menu-point info-button">ИНФОРМАЦИЯ</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+                    <!-- <a class="menu-point" href="index.html">ГЛАВНАЯ</a> -->
+                    <!-- <button class="menu-point main-button">ГЛАВНАЯ</button>
+    
+                    <button class="menu-point devices-button">ПРИБОРЫ</button>
+                    <button class="menu-point contacts-button">КОНТАКТЫ</button>
+                    <button class="menu-point exhibition-button">ВЫСТАВКИ</button> -->
+                    <!-- <a class="menu-point contacts-button" href="">КОНТАКТЫ</a> -->
+
+
+            </nav>
         </div>
     </header>
     <main>
@@ -67,10 +92,12 @@
                 <img class="footer__img" src="./img/PhoneLogo.svg" alt="Phone" />
                 <img class="footer__img phone" src="./img/WALogo.svg" alt="WA" />
             </div>
-            <p class="footer__phone">8 900 000 00 00</p>
+            <p class="footer__phone">sonar.tiflo@mail.ru</p>
         </div>  
         <img class="footer__arrow" src="./img/ArrowUp.svg" alt="">
         <script src="js/page.js"></script>
+        <script src="js/burger.js"></script>
+
     </footer>
     
 </body>

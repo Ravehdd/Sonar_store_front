@@ -82,7 +82,7 @@ function showProductList(products) {
     productItem.querySelector('.card__image').src = product.photo || 'xex';
     console.log("Photo is " + product.photo);
     if (product.name.length > 25) {
-        productItem.querySelector('.card__title').textContent = product.name.slice(0, 25) + '...' || 'xwx';
+        productItem.querySelector('.card__title').textContent = product.name.slice(0, 35) + '...' || 'xwx';
     }
     else {
         productItem.querySelector('.card__title').textContent = product.name || 'xwx';
@@ -265,7 +265,10 @@ function sortProductsByCategory2(categoryName) {
 // Функция для скролла вниз
 function scrollToBottom() {
   // Скроллим вниз на весь экран
-  window.scrollTo(0, document.body.scrollHeight);
+  window.scrollTo(  {
+    top: document.body.scrollHeight,
+    behavior: 'smooth'
+  });
 }
 
 // Функция для скролла вверх
@@ -275,6 +278,12 @@ function scrollToTop() {
     top: 0,
     behavior: 'smooth'
   });
+}
+
+
+
+function showInfo() {
+  window.location.href = `info.html`;
 }
 
 function scrollToProducts() {
@@ -296,6 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const contactButton = document.querySelector('.contacts-button'); // Замените '.contact-button' на класс или id вашей кнопки
   const toolsButton = document.querySelector('.devices-button');
   const mainButton = document.querySelector('.main-button');
+  const infoButton = document.querySelector('.info-button');  
+  const footerButton = document.querySelector('.footer-button');
+
 
   if (mainButton) {
     mainButton.addEventListener('click', scrollToTop);
@@ -314,6 +326,38 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.error('Кнопка контактов не найдена');
   }
+
+  if (infoButton) {
+    infoButton.addEventListener('click', showInfo);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
+
+  if (footerButton) {
+    footerButton.addEventListener('click', scrollToTop);
+  } else {
+    console.error('Кнопка контактов не найдена');
+  }
 });
+
+function openGoogleMail() {
+    var mailto = 'mailto:sonar.tiflo@mail.ru';
+    if (navigator.canIUse && navigator.canIUse('clipboard')) {
+        // Проверяем поддержку API Clipboard API
+        navigator.clipboard.writeText(mailto).then(
+            function() {
+                console.log('Адрес вставлен в буфер обмена');
+            }).catch(function(err) {
+                console.error('Ошибка при копировании:', err);
+            });
+        
+        // Открываем Google Mail с предустановленным адресом
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&source=mailto&to=sonar.tiflo@mail.ru', '_blank');
+    } else {
+        // Если Clipboard API не поддерживается, открываем Google Mail с предустановленным адресом
+        window.open('https://mail.google.com/mail/?view=cm&fs=1&tf=1&source=mailto&to=sonar.tiflo@mail.ru', '_blank');
+    }
+}
+
 
 

@@ -35,7 +35,7 @@
                         <button class="menu-point contacts-button">КОНТАКТЫ</button>
                     </li>
                     <li>
-                        <button class="menu-point exhibition-button">ВЫСТАВКИ</button>
+                        <button class="menu-point info-button">ИНФОРМАЦИЯ</button>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -65,7 +65,8 @@
                         Наша команда уже более 20 лет разарабатывает приборы 
                        для людей с нарушениями зрения, поэтому люди нам доверяют.</p>
                 </div>
-                <a class="more-button" href="https://t.me/ravehdd">ЗАДАТЬ ВОПРОС</a>
+                <button class="more-button" onClick="openGoogleMail()">ЗАДАТЬ ВОПРОС</button>
+                <!-- <a class="more-button" href="mailto:max.ershov.spb@gmail.com">ЗАДАТЬ ВОПРОС</a> -->
             </div>
         </div>
     </header>
@@ -123,94 +124,15 @@
                                     <img class="card__image" src="" alt="">
                                     <div class="card__text">
                                         <h3 class="card__title"></h3>
-                                        <div class="card__category">
-                                            <img class="category__image" src="" alt="">
-                                            <p class="category__name"></p>
-                                        </div>
+                                    </div>
+                                    <div class="card__category">
+                                        <img class="category__image" src="" alt="">
+                                        <p class="category__name"></p>
                                     </div>
                                 </div>
                         <!-- </div> -->
                     </template>
-                    <!-- <div id="product-template" class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img class="card__image" src="./img/demoproduct.png" alt="">
-                        <div class="card__text">
-                            <p class="card__title">Ультразвуковой фонарик СОНАР-5УФ-В1</p>
-                            <div class="card__category">
-                                <img class="category__image" src="./img/Orientation.svg" alt="">
-                                <p class="category_name">Ориентирование</p>
-                            </div>
-                        </div>
-                    </div> -->
+
                 </div>
             </div>
             
@@ -219,10 +141,6 @@
     <div class="footer">
         <div class="footer__main">
             <p class="footer__text">© 2024 «Сонар» - все права защищены</p>
-            <div class="footer__other">
-                <a href="">Выставки</a>
-                <a href="">Нововведения</a>
-            </div>
             <div class="footer__links">
                 <a href="https://t.me/ravehdd">
                     <img class="footer__img first" src="./img/TgLogo.svg" alt="TG" />
@@ -234,9 +152,11 @@
                     <img class="footer__img phone" src="./img/WALogo.svg" alt="WA" />
                 </a>
             </div>
-            <p class="footer__phone">8 900 000 00 00</p>
+            <p class="footer__phone">sonar.tiflo@mail.ru</p>
         </div>  
-        <img class="footer__arrow" src="./img/ArrowUp.svg" alt="">
+        <button class="footer-button">
+            <img class="footer__arrow" src="./img/ArrowUp.svg" alt="">
+        </button>
         
     </div>
 </body>

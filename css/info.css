@@ -1,0 +1,134 @@
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    letter-spacing: 0.2px;
+    font-size: 15px;
+    line-height: 1.2em;
+    margin-inline: 80px;
+    margin-top: 42px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Fira Sans Condensed", sans-serif;
+    line-height: 1.1em;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    /* margin-inline: 80px; */
+
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    width: 50%;
+    /* margin-left: 90px; */
+
+}
+
+.menu button {
+    letter-spacing: 0.1em;
+}
+
+.menu li {
+    /* margin-left: 10%; */
+}
+
+.menu-point {
+    border: 1px solid white;
+    background: white;
+    border-radius: 0.5em;
+    padding: 10px 20px 10px 20px;
+    margin-left: 10%;
+    color: #000;
+    font-weight: 500;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.new-devs p {
+    /* margin-block: 30px; */
+}
+
+text {
+    color: rgb(255, 0, 85);
+}
+
+a {
+    color: rgb(255, 0, 85);
+}
+
+.exhibitions {
+    margin-top: 50px;
+}
+
+.second-exhibition {
+    /* margin-top: 10px; */
+}
+
+.exhibition-phones {
+    display: flex;
+    margin-top: 0;
+}
+
+.exhibition-phone-title {
+    margin-right: 10px;
+    margin-block: 0;
+}
+
+.phone-numbers .first {
+    margin-block: 0;
+}
+
+.footer {
+    margin-top: 50px;
+    margin-inline: 0 !important;
+}
+
+@media (max-width: 1920px) {
+    .menu {
+        width: 30%;
+    }
+}
+@media (max-width: 1440px) {
+    .menu {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        font-size: 12px;
+    }
+
+    body {
+        margin-inline: 30px;
+    }
+}

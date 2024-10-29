@@ -168,20 +168,32 @@ ul {
 }   
 
 .more-button {
+    font-family: "Montserrat", sans-serif;
     margin-left: 80px;
-    margin-top: 60px;
+    font-size: large;
+    /* letter-spacing: 0.1em; */
+    font-weight: 300;
+    /* margin-top: 60px; */
     border: 3px solid #6F6F6F;
     background: #696A6A;
     border-radius: 0.5em;
     color: white;
-    padding: 25px 40px;
+    padding: 25px 60px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+
 
 @media (min-width:1750px){
     .logo {
             width: 200px;
     
+        }
+    
+    .menu-point {
+        border-radius: 0.7em;
+            padding: 15px 30px 15px 30px;
+
         }
     .offer {
             width: 1050px;
@@ -241,7 +253,7 @@ ul {
     
     .more-button {
             margin-left: 80px;
-            margin-top: 80px;
+            /* margin-top: 80px; */
             font-weight: 500;
             font-size: 30px;
             border: 3px solid #6F6F6F;
@@ -261,12 +273,12 @@ ul {
     
         } */
     
-    .menu-point {
+    /* .menu-point {
             border: 1px solid white;
             background: white;
             border-radius: 0.5em;
             padding: 5px 10px 5px 10px;
-        }
+        } */
 
     .header {
         /* background-color: white; */
@@ -308,7 +320,7 @@ ul {
 @media (max-width: 1024px) {
     .offer {
             width: 600px;
-            margin-top: 4rem;
+            margin-top: 2rem;
             border: 1px solid white;
             background: white;
             border-radius: 0.5em;
@@ -364,7 +376,7 @@ ul {
     
     .more-button {
             margin-left: 80px;
-            margin-top: 60px;
+            /* margin-top: 60px; */
             font-weight: 500;
             font-size: 16px;
             border: 3px solid #6F6F6F;
@@ -476,7 +488,7 @@ ul {
     
         .more-button {
             margin-left: 80px;
-            margin-top: 49px;
+            /* margin-top: 49px; */
             font-weight: 500;
             font-size: 12px;
             border: 3px solid #6F6F6F;
@@ -535,6 +547,10 @@ ul {
     }
 
 @media (max-width: 570px) {
+        .nav {
+            margin-inline: 40px;
+        }
+        
         .offer {
                 width: 400px;
                 margin-top: 2rem;
@@ -593,7 +609,7 @@ ul {
         
             .more-button {
                 margin-left: 40px;
-                margin-top: 49px;
+                /* margin-top: 49px; */
                 font-weight: 500;
                 font-size: 10px;
                 border: 3px solid #6F6F6F;
@@ -723,7 +739,7 @@ ul {
         
             .more-button {
                 margin-left: 40px;
-                margin-top: 49px;
+                /* margin-top: 49px; */
                 font-weight: 500;
                 font-size: 10px;
                 border: 3px solid #696A6A;

@@ -55,6 +55,11 @@
     margin-block: 20px;
 }
 
+.footer button {
+    border-style: none;
+    background-color: #ffffff00;
+}
+
 
 
 
